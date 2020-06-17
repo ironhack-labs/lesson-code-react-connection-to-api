@@ -17,17 +17,7 @@ const DOG_BREED_SERVICE = {
         .catch(error => reject(error));
     });
   },
-  listSubBreeds: breed => {
-    return new Promise((resolve, reject) => {
-      axios
-        .get(`/breed/${breed}/list`)
-        .then(result => {
-          const subBreeds = result.data.message;
-          resolve(subBreeds);
-        })
-        .catch(error => reject(error));
-    });
-  }
+  listSubBreeds: breed => {}
 };
 
 export default DOG_BREED_SERVICE;
